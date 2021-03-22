@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="user"
+            type="com.example.twowaydatabinding.UserModel"/>
+        <variable
+            name="author"
+            type="com.example.twowaydatabinding.UserModel" />
+        <variable
+            name="email"
+            type="com.example.twowaydatabinding.UserModel" />
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/example_text"
+            android:textColor="#FF5722"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+          <TextView
+            android:id="@+id/example_output"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{exampleText.text}"/>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#2196F3"
+            android:text="@{user.firstName}"/>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#CDDC39"
+            android:text="@{user.lastName}"/>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF9800"
+            android:text="@{user.email}"/>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF5722"
+            android:text="@{author.firstName}"/>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/teal_200"
+            android:text="@{author.lastName}"/>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#E91E63"
+            android:text="@{author.email}"/>
+    </LinearLayout>
+</layout>
